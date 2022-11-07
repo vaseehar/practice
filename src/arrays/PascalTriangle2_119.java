@@ -8,7 +8,6 @@ import java.util.List;
 public class PascalTriangle2_119 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 
