@@ -6,13 +6,17 @@ import java.util.List;
 import binaryTree.InOrderTraversal.TreeNode;
 
 public class PreOrderTraversal_144 {
-	List<Integer> preOrder = new ArrayList<>();
+	static List<Integer> preOrder = new ArrayList<>();
 
 	public static void main(String[] args) {
-
+		TreeNode node = new TreeNode(1);
+		node.left = new TreeNode(5);
+		node.right = new TreeNode(2);
+		node.right.left = new TreeNode(3);
+		System.out.println(preorderTraversal(node));
 	}
 
-	public List<Integer> preorderTraversal(TreeNode root) {
+	public static List<Integer> preorderTraversal(TreeNode root) {
 		if (root == null) {
 			return preOrder;
 		}
