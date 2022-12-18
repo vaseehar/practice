@@ -1,11 +1,12 @@
 package binaryTree;
 
+
 /*https://leetcode.com/problems/symmetric-tree/
 */
 public class SymmetricTree {
 
 	public static void main(String[] args) {
-
+		
 	}
 
 	public boolean isSymmetric(TreeNode root) {
