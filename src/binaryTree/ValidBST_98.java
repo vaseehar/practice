@@ -34,11 +34,11 @@ public class ValidBST_98 {
 	}*/
 	
 	//works ; copied from leetcode discussion
-	public boolean isValidBST(TreeNode root) {
+	public static boolean isValidBST(TreeNode root) {
 		return isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);
 	}
 
-	public boolean isValid(TreeNode root, long min, long max) {
+	public static boolean isValid(TreeNode root, long min, long max) {
 		if (root == null)
 			return true;
 		if (root.val >= max || root.val <= min)
