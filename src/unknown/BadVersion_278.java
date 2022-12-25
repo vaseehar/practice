@@ -3,7 +3,9 @@ package unknown;
 public class BadVersion_278 extends VersionControl {
 
 	public static void main(String[] args) {
-
+		new BadVersion_278();
+		int bv = BadVersion_278.firstBadVersion(12);
+		System.out.println(bv);
 	}
 
 	public static int firstBadVersion(int n) {
