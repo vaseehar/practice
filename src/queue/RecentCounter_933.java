@@ -9,6 +9,8 @@ public class RecentCounter_933 {
 
 	public RecentCounter_933() {
 		queue = new LinkedList<>();
+		//ArrayDeque took 51 ms and linkedList took 22ms to execute
+		//queue = new ArrayDeque<>();
 	}
 
 	public int ping(int t) {
