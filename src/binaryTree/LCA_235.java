@@ -53,6 +53,13 @@ public class LCA_235 {
 		}
 		return stackP.peek();
 	}
+	
+	//easier , copied from discussion
+	 public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
+	        if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q);
+	        else if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q);
+	        else return root;
+	    }
 
 	public static class TreeNode {
 		int val;
