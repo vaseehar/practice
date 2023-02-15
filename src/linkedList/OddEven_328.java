@@ -1,7 +1,5 @@
 package linkedList;
 
-import linkedList.SwapNodesInPairs_24.ListNode;
-
 public class OddEven_328 {
 
 	public static void main(String[] args) {
@@ -9,7 +7,8 @@ public class OddEven_328 {
 	}
 
 	public ListNode oddEvenList(ListNode head) {
-		if(head==null) return null;
+		if (head == null)
+			return null;
 		if (head.next == null)
 			return head;
 		ListNode evenNodeFirst = head.next, oddNode = head, evenNode = head.next, lastOddNode = oddNode;
