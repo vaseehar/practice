@@ -11,6 +11,11 @@ public class SearchBST_700 {
 		while (node != null) {
 			if (node.val == val)
 				return node;
+			else if (node.val > val)
+				node = node.left;
+			else
+				node = node.right;
+
 		}
 		return null;
 	}
