@@ -35,6 +35,21 @@ public class RemoveNthNodeFromEnd_19 {
 		return head;
 	}
 
+	// copied from discussion , faster solution using fast and slow pointers
+	public ListNode removeNthFromEnd1(ListNode head, int n) {
+		ListNode fast = head, slow = head;
+		for (int i = 0; i < n; i++)
+			fast = fast.next;
+		if (fast == null)
+			return head.next;
+		while (fast.next != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+		slow.next = slow.next.next;
+		return head;
+	}
+
 	public static class ListNode {
 		int val;
 		ListNode next;
