@@ -1,10 +1,8 @@
 package linkedList;
 
-import linkedList.Merge2SortedLists.ListNode;
-
 /*https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 */
-public class DeleteDuplicateSortedList {
+public class DeleteDuplicateSortedList_83 {
 
 	public static void main(String[] args) {
 		ListNode n = new ListNode(1);

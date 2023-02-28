@@ -1,6 +1,6 @@
 package linkedList;
 
-import linkedList.DeleteDuplicateSortedList.ListNode;
+import linkedList.DeleteDuplicateSortedList_83.ListNode;
 
 /*https://leetcode.com/problems/add-two-numbers/
 */
