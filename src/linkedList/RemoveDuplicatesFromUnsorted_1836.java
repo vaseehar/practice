@@ -20,7 +20,7 @@ public class RemoveDuplicatesFromUnsorted_1836 {
 		int[] countArr = new int[100001];
 		ListNode fast = head, slow = new ListNode(0);
 		while (fast != null) {
-			countArr[fast.val] = countArr[fast.val] + 1;
+			countArr[fast.val]++;
 			fast = fast.next;
 		}
 		fast = head;
