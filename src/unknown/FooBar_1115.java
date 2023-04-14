@@ -9,12 +9,10 @@ public class FooBar_1115 {
 	}
 
 	private int n;
-	Semaphore semFoo, semBar;
+	Semaphore semFoo = new Semaphore(1), semBar = new Semaphore(0);
 
 	public FooBar_1115(int n) {
 		this.n = n;
-		semFoo = new Semaphore(1);
-		semBar = new Semaphore(0);
 	}
 
 	public void foo(Runnable printFoo) throws InterruptedException {
