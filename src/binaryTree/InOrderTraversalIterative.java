@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import binaryTree.InOrderTraversal.TreeNode;
 
 /*https://leetcode.com/problems/binary-tree-inorder-traversal/
 */

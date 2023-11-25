@@ -1,6 +1,5 @@
 package binaryTree;
 
-import binaryTree.InOrderTraversal.TreeNode;
 
 /*https://leetcode.com/problems/path-sum/
 */

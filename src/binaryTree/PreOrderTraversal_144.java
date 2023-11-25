@@ -3,7 +3,6 @@ package binaryTree;
 import java.util.ArrayList;
 import java.util.List;
 
-import binaryTree.InOrderTraversal.TreeNode;
 
 public class PreOrderTraversal_144 {
 	static List<Integer> preOrder = new ArrayList<>();
