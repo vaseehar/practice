@@ -14,7 +14,7 @@ public class HappryNumber_202 {
         Set<Integer> set = new HashSet<>();
         while (sum != 1 && !set.contains(sum)) {
             set.add(sum);
-            sum=0;
+            sum = 0;
             while (n > 0) {
                 sum += Math.pow(n % 10, 2);
                 n /= 10;

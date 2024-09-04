@@ -4,32 +4,32 @@ import java.util.Stack;
 
 public class BSTIterator_173 {
 
-	Stack<TreeNode> stack = new Stack<>();
-	TreeNode pointer;
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode pointer;
 
-	public BSTIterator_173(TreeNode root) {
-		traverse(root);
-		pointer = new TreeNode(stack.peek().val - 1);
-	}
+    public BSTIterator_173(TreeNode root) {
+        traverse(root);
+        pointer = new TreeNode(stack.peek().val - 1);
+    }
 
-	public int next() {
-		pointer = stack.pop();
-		return pointer.val;
-	}
+    public int next() {
+        pointer = stack.pop();
+        return pointer.val;
+    }
 
-	public boolean hasNext() {
+    public boolean hasNext() {
 
-		return !stack.isEmpty();
-	}
+        return !stack.isEmpty();
+    }
 
-	public void traverse(TreeNode node) {
-		if (node == null)
-			return;
-		traverse(node.right);
-		stack.push(node);
-		traverse(node.left);
-	}
-	//Faster solution , coped from discussion
+    public void traverse(TreeNode node) {
+        if (node == null)
+            return;
+        traverse(node.right);
+        stack.push(node);
+        traverse(node.left);
+    }
+    //Faster solution , coped from discussion
 	/*Stack<TreeNode> stack;
 	public BSTIterator(TreeNode root) {
 		stack = new Stack<>();
@@ -52,27 +52,27 @@ public class BSTIterator_173 {
 		}
 	}*/
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-	}
+    }
 
-	public static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-		TreeNode() {
-		}
+        TreeNode() {
+        }
 
-		TreeNode(int val) {
-			this.val = val;
-		}
+        TreeNode(int val) {
+            this.val = val;
+        }
 
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 
 }

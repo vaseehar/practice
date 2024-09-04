@@ -6,12 +6,12 @@ import java.util.PriorityQueue;
 
 public class MedianFinder_295 {
 
-	public static void main(String[] args) {
-		MedianFinder_295 m = new MedianFinder_295();
-		m.addNum(1);
-		m.addNum(2);
-		System.out.println(m.findMedian());
-	}
+    public static void main(String[] args) {
+        MedianFinder_295 m = new MedianFinder_295();
+        m.addNum(1);
+        m.addNum(2);
+        System.out.println(m.findMedian());
+    }
 //Slower
 //	List<Integer> nums;
 //
@@ -42,33 +42,33 @@ public class MedianFinder_295 {
 //		return nums.get(nums.size() / 2);
 //	}
 
-	// Much faster Solution
-	PriorityQueue<Integer> Fhalf = new PriorityQueue<>((a, b) -> b - a);
-	PriorityQueue<Integer> Shalf = new PriorityQueue<>();
+    // Much faster Solution
+    PriorityQueue<Integer> Fhalf = new PriorityQueue<>((a, b) -> b - a);
+    PriorityQueue<Integer> Shalf = new PriorityQueue<>();
 
-	public MedianFinder_295() {
-	}
+    public MedianFinder_295() {
+    }
 
-	public void addNum(int num) {
-		if (Fhalf.isEmpty() || num <= Fhalf.peek()) {
-			Fhalf.add(num);
-		} else {
-			Shalf.add(num);
-		}
+    public void addNum(int num) {
+        if (Fhalf.isEmpty() || num <= Fhalf.peek()) {
+            Fhalf.add(num);
+        } else {
+            Shalf.add(num);
+        }
 
-		if (Shalf.size() > Fhalf.size()) {
-			Fhalf.add(Shalf.poll());
-		} else if (Fhalf.size() > Shalf.size() + 1) {
-			Shalf.add(Fhalf.poll());
-		}
-	}
+        if (Shalf.size() > Fhalf.size()) {
+            Fhalf.add(Shalf.poll());
+        } else if (Fhalf.size() > Shalf.size() + 1) {
+            Shalf.add(Fhalf.poll());
+        }
+    }
 
-	public double findMedian() {
-		if (Fhalf.size() != Shalf.size()) {
-			return Fhalf.peek();
-		} else {
-			return (double) ((double) Fhalf.peek() + (double) Shalf.peek()) / 2.0;
-		}
-	}
+    public double findMedian() {
+        if (Fhalf.size() != Shalf.size()) {
+            return Fhalf.peek();
+        } else {
+            return (double) ((double) Fhalf.peek() + (double) Shalf.peek()) / 2.0;
+        }
+    }
 
 }

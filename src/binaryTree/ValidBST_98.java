@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ValidBST_98 {
-	static List<Integer> inOrderList = new ArrayList<>();
+    static List<Integer> inOrderList = new ArrayList<>();
 
-	public static void main(String[] args) {
-		TreeNode node = new TreeNode(0);
-		
-		System.out.println(isValidBST(node));
-	}
+    public static void main(String[] args) {
+        TreeNode node = new TreeNode(0);
 
-	//Works in local , but fails in leetcode.
+        System.out.println(isValidBST(node));
+    }
+
+    //Works in local , but fails in leetcode.
 	/*public static boolean isValidBST(TreeNode root) {
 		if (root == null)
 			return true;
@@ -32,38 +32,38 @@ public class ValidBST_98 {
 		inOrderList.add(root.val);
 		inOrderTraversal(root.right);
 	}*/
-	
-	//works ; copied from leetcode discussion
-	public static boolean isValidBST(TreeNode root) {
-		return isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);
-	}
 
-	public static boolean isValid(TreeNode root, long min, long max) {
-		if (root == null)
-			return true;
-		if (root.val >= max || root.val <= min)
-			return false;
+    //works ; copied from leetcode discussion
+    public static boolean isValidBST(TreeNode root) {
+        return isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
 
-		return isValid(root.left, min, root.val) && isValid(root.right, root.val, max);
-	}
+    public static boolean isValid(TreeNode root, long min, long max) {
+        if (root == null)
+            return true;
+        if (root.val >= max || root.val <= min)
+            return false;
 
-	public static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
+        return isValid(root.left, min, root.val) && isValid(root.right, root.val, max);
+    }
 
-		TreeNode() {
-		}
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-		TreeNode(int val) {
-			this.val = val;
-		}
+        TreeNode() {
+        }
 
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 
 }
